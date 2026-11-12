@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+build/
+dist/
+coverage/
+
+# Local environment files (keep the safe template tracked)
+.env*
+!.env.example
+
+# Server-generated runtime data and uploads
+server/data/
+public/uploads/
+
+# AI Studio generated working artifacts
+.aistudio/
+
+# OS / logs
+.DS_Store
+*.log

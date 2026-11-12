@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Bodoni Moda', 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+}
+
+.font-serif-luxury {
+  font-family: 'Bodoni Moda', 'Playfair Display', Georgia, serif;
+}
+
+.font-editorial {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans-luxury {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono-tabular {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Metallic gold text gradient */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #f7eccb 0%, #d4af37 50%, #aa8012 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #e5c158 0%, #d4af37 50%, #b8860b 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(212, 175, 55, 0.22);
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: rgba(22, 11, 15, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.16);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom smooth dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0608;
+}
+::-webkit-scrollbar-thumb {
+  background: #2d181e;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Infinite smooth press marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar utility for mobile circular category swipe */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Silky, slow cinematic Ken Burns zoom for hero photography */
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.animate-kenburns {
+  animation: kenburns 8.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  will-change: transform;
+  transform-origin: 70% 40%;
+}
+
